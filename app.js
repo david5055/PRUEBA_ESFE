@@ -10,9 +10,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Layouts (EJS)
+
 app.use(expressLayouts);
-app.set('layout', 'layout'); // layout.ejs por defecto
+app.set('layout', 'layout'); 
 
 // Middleware para formularios HTML
 app.use(express.urlencoded({ extended: true }));
@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
 
 // Ruta para usuario no administrador
 app.get('/welcome', requireLogin, (req, res) => {
-  res.locals.hideHeader = true; // 🔒 Oculta el header solo en esta vista
+  res.locals.hideHeader = true; // 
   res.render('welcome', { title: 'Bienvenido' });
 });
 

@@ -1,0 +1,25 @@
+
+CREATE DATABASE crud_roles;
+GO
+
+
+USE crud_roles;
+GO
+
+
+CREATE TABLE roles (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name VARCHAR(50) NOT NULL UNIQUE
+);
+GO
+
+
+CREATE TABLE users (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role_id INT NOT NULL,
+    FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+GO
