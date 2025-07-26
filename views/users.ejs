@@ -1,0 +1,27 @@
+<h2>Lista de Usuarios</h2>
+
+<a href="/users/new" class="btn btn-primary">Agregar nuevo usuario</a>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Rol</th>
+    <th>Acciones</th>
+  </tr>
+  <% users.forEach(user => { %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.role %></td>
+      <td>
+        <a href="/users/edit/<%= user.id %>" class="btn-link">Editar</a>
+        <form method="POST" action="/users/delete/<%= user.id %>" style="display:inline;">
+          <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+</table>

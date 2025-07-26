@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<% if (typeof hideHeader === 'undefined' || !hideHeader) { %>
+  <header>
+    <h1>Sistema de Roles</h1>
+    <nav>
+      <a href="/">Inicio</a> |
+      <a href="/roles">Roles</a> |
+      <a href="/users">Usuarios</a> |
+    </nav>
+  </header>
+<% } %>
+
+  <main>
+    <%- body %> <!-- Aquí se inyecta la vista hija -->
+  </main>
+
+</body>
+</html>
