@@ -1,4 +1,4 @@
-/* Solo aplicará al login */
+
 body.login-page {
   background-color: #f4f4f4;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +6,7 @@ body.login-page {
   padding: 0;
 }
 
-/* Contenedor centrado */
+
 .login-container {
   max-width: 400px;
   margin: 100px auto;
@@ -16,13 +16,12 @@ body.login-page {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Título */
+
 .login-container h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Campos del formulario */
 .login-container label {
   display: block;
   margin-bottom: 5px;
@@ -38,7 +37,7 @@ body.login-page {
   font-size: 14px;
 }
 
-/* Botón */
+
 .btn-login {
   width: 100%;
   padding: 10px;
@@ -55,7 +54,7 @@ body.login-page {
   background-color: #e60000;
 }
 
-/* Error */
+
 .error {
   background-color: #ffd6d6;
   color: #b30000;

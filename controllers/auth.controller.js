@@ -1,10 +1,10 @@
-const User = require('../models/user'); // Usa tu modelo actual
+const User = require('../models/user'); 
 
 // GET: Mostrar formulario de login
 const showLoginForm = (req, res) => {
   res.render('login', {
     title: 'Iniciar Sesión',
-    hideHeader: true // <- Esto oculta el menú/header desde layout.ejs
+    hideHeader: true 
   });
 };
 
@@ -28,7 +28,7 @@ const login = async (req, res) => {
     req.session.user = {
       id: user.id,
       name: user.name,
-      role: user.role // Asegúrate que getUserByEmail incluya el campo 'role'
+      role: user.role 
     };
 
     // Redirigir según el rol
